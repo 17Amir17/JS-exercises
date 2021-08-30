@@ -22,6 +22,12 @@ function getSecondHalfRange(grades){
     return getRange(secondHalf);
 }
 
+function formatStats(range, median, secondHalfRange){
+    return `Stats\n\tRange: ${range}\n\tMedian: ${median}\n\tHalfRange: ${secondHalfRange}` 
+}
+
 let range = getRange(grades);
 let median = getMedian(grades);
 let secondHalfRange = getSecondHalfRange(grades);
+let stats = formatStats(range, median, secondHalfRange);
+console.log(stats);
