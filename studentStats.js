@@ -1,5 +1,6 @@
 "use strict";
-const grades = [73, 91, 88, 56, 62, 84, 95, 96, 88, 92, 97];
+
+const grades = [73, 91, 88, 56, 62, 84, 95, 96, 88, 92];
 
 // your code goes here
 function getRange(grades){
@@ -17,13 +18,14 @@ function getMedian(grades){
 }
 
 function getSecondHalfRange(grades){
+    //I want to split the array in half and run the getRange function on it
     let middleIndex = grades.length/2;
     let secondHalf = grades.slice(middleIndex, grades.length);
     return getRange(secondHalf);
 }
 
 function formatStats(range, median, secondHalfRange){
-    return `Stats\n\tRange: ${range}\n\tMedian: ${median}\n\tHalfRange: ${secondHalfRange}` ;
+    return `Stats\n\tRange: ${range}\n\tMedian: ${median}\n\tHalfRange: ${secondHalfRange}`; //String formatting is very clean
 }
 
 let range = getRange(grades);
