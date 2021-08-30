@@ -16,5 +16,12 @@ function getMedian(grades){
    return sorted[Number(middleIndex)];
 }
 
+function getSecondHalfRange(grades){
+    let middleIndex = grades.length/2;
+    let secondHalf = grades.slice(middleIndex, grades.length);
+    return getRange(secondHalf);
+}
+
 let range = getRange(grades);
 let median = getMedian(grades);
+let secondHalfRange = getSecondHalfRange(grades);
