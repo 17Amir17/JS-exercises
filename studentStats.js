@@ -1,5 +1,5 @@
 "use strict";
-const grades = [73, 91, 88, 56, 62, 84, 95, 96, 88, 92]
+const grades = [73, 91, 88, 56, 62, 84, 95, 96, 88, 92, 97];
 
 // your code goes here
 function getRange(grades){
@@ -9,10 +9,10 @@ function getRange(grades){
 }
 
 function getMedian(grades){
-    // Sort the array, return the number in the index of the center of the array (index must be an integer so I convert it into a number)
-   let middleIndex = grades.length/2;
+    // Sort the array, return the number in the index of the center of the array (index must be an integer so I convert it into a integer by doing math.floor)
+   let middleIndex = Math.floor(grades.length/2);
    let sorted = grades.slice(); //Copy the array so that i do not modify its order
-   sorted.sort()
+   sorted.sort();
    return sorted[Number(middleIndex)];
 }
 
@@ -23,7 +23,7 @@ function getSecondHalfRange(grades){
 }
 
 function formatStats(range, median, secondHalfRange){
-    return `Stats\n\tRange: ${range}\n\tMedian: ${median}\n\tHalfRange: ${secondHalfRange}` 
+    return `Stats\n\tRange: ${range}\n\tMedian: ${median}\n\tHalfRange: ${secondHalfRange}` ;
 }
 
 let range = getRange(grades);
