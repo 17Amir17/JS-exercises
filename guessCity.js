@@ -1,3 +1,5 @@
+"use strict";
+
 function guessCity(capital, coastal, famous, ancient) {
     // your code goes here
     const cities = {
