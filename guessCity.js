@@ -11,7 +11,7 @@ function guessCity(capital, coastal, famous, ancient) {
         "Musmus": {"capital": false, "coastal":false, "famous": false, "ancient": false},
     };
     for (const city in cities) {
-        if(cities[city].capital == capital && cities[city].coastal == coastal && cities[city].famous == famous && cities[city].ancient === ancient){
+        if(cities[city].capital === capital && cities[city].coastal === coastal && cities[city].famous === famous && cities[city].ancient === ancient){
             return city;
         }
     }
