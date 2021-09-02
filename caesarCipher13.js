@@ -1,10 +1,9 @@
 'use strict';
 
 function rot13(str) {
-  let abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let rot13ABC = "NOPQRSTUVWXYZABCDEFGHIJKLM";
   let newStr = ""
-  str.split("").forEach((c) => newStr += abc.indexOf(c) === -1 ? c : rot13ABC[abc.indexOf(c)])
+  str.split("").forEach((c) => newStr += !(/[a-zA-Z]/).test(c) ? c : String.fromCharCode((c.charCodeAt() - 65 + 13) % 65 % 26 + 65))
+  console.log(newStr)
   return newStr;
 }
 
